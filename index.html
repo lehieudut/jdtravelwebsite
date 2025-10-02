@@ -4,19 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Công ty Du lịch KIM ĐỨC</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background:#0288d1; color:#fff; padding:20px; text-align:center; }
-    nav { background:#01579b; padding:10px; text-align:center; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-    section { padding:40px; max-width:900px; margin:auto; }
-    h2 { color:#0288d1; }
-    .tour { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:5px; }
-    footer { background:#0288d1; color:#fff; text-align:center; padding:15px; margin-top:30px; }
-  </style>
+    <style>
+         body { font-family: Arial, sans-serif; margin:0; padding:0; }
+         header { background:#0288d1; color:#fff; padding:20px; text-align:center; }
+         nav { background:#01579b; padding:10px; text-align:center; }
+         nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+         section { padding:40px; max-width:1000px; margin:auto; }
+         h2 { color:#0288d1; }
+         .tour { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:5px; }
+         footer { background:#0288d1; color:#fff; text-align:center; padding:15px; margin-top:30px; }
+         /* Slide ảnh */
+         .slider-container {
+         position: relative;
+         max-width: 1000px;
+         margin: auto;
+         overflow: hidden;
+         border-radius: 8px;
+         }
+         .slides {
+         display: flex;
+         width: 300%; /* 3 ảnh */
+         animation: slide 12s infinite;
+         }
+         .slides img {
+         width: 100%;
+         flex-shrink: 0;
+         }
+         @keyframes slide {
+         0% { transform: translateX(0%); }
+         25% { transform: translateX(0%); }
+         35% { transform: translateX(-100%); }
+         60% { transform: translateX(-100%); }
+         70% { transform: translateX(-200%); }
+         95% { transform: translateX(-200%); }
+         100% { transform: translateX(0%); }
+         }
+      </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>CÔNG TY DU LỊCH KIM ĐỨC</h1>
     <p>Uy tín - Chuyên nghiệp - Trọn vẹn niềm vui</p>
@@ -28,6 +54,79 @@
     <a href="#hinhanh">Hình ảnh</a>
     <a href="#lienhe">Liên hệ</a>
   </nav>
+  
+    <!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
+	<!-- Phần Slide Ảnh -->
+	<section id="hinh-anh" style="text-align:center; margin:20px auto;">
+	  <div class="slideshow-container" id="slideshow"></div>
+	</section>
+
+
+	<style>
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	}
+	.slide-img {
+	  width: 100%;
+	  height: 400px;
+	  object-fit: cover;
+	  object-position: center;
+	}
+	.mySlides { display: none; }
+	.fade { animation: fadeEffect 1s; }
+	@keyframes fadeEffect {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+	</style>
+
+	<script>
+	const images = [
+	  "hinh1.jpg",
+	  "hinh2.jpg",
+	  "IMG_0638.jpg",
+	  "IMG_0639.jpg",
+	  "IMG_0651.jpg",
+	  "IMG_0659.jpg",
+	  "IMG_0664.jpg",
+	  "IMG_0666.jpg",
+	  "IMG_0672.jpg",
+	  "IMG_3637.jpg",
+	  "IMG_4480.jpg",
+	  "IMG_5201.jpg",
+	  "IMG_5242.jpg",
+	  "IMG_5485.jpg"
+	]; // chỉ cần thêm tên file vào đây
+
+	const container = document.getElementById("slideshow");
+	images.forEach(img => {
+	  const div = document.createElement("div");
+	  div.className = "mySlides fade";
+	  div.innerHTML = `<img src="images/${img}" class="slide-img">`;
+	  container.appendChild(div);
+	});
+
+	let slideIndex = 0;
+	showSlides();
+	function showSlides() {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  slides[slideIndex-1].style.display = "block";  
+	  setTimeout(showSlides, 3000); 
+	}
+	</script>
+	
+
 
   <section id="gioithieu">
     <h2>Giới thiệu</h2>
