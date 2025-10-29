@@ -1,171 +1,286 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Công ty Du lịch KIM ĐỨC</title>
-    <style>
-         body { font-family: Arial, sans-serif; margin:0; padding:0; }
-         header { background:#0288d1; color:#fff; padding:20px; text-align:center; }
-         nav { background:#01579b; padding:10px; text-align:center; }
-         nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-         section { padding:40px; max-width:1000px; margin:auto; }
-         h2 { color:#0288d1; }
-         .tour { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:5px; }
-         footer { background:#0288d1; color:#fff; text-align:center; padding:15px; margin-top:30px; }
-         /* Slide ảnh */
-         .slider-container {
-         position: relative;
-         max-width: 1000px;
-         margin: auto;
-         overflow: hidden;
-         border-radius: 8px;
-         }
-         .slides {
-         display: flex;
-         width: 300%; /* 3 ảnh */
-         animation: slide 12s infinite;
-         }
-         .slides img {
-         width: 100%;
-         flex-shrink: 0;
-         }
-         @keyframes slide {
-         0% { transform: translateX(0%); }
-         25% { transform: translateX(0%); }
-         35% { transform: translateX(-100%); }
-         60% { transform: translateX(-100%); }
-         70% { transform: translateX(-200%); }
-         95% { transform: translateX(-200%); }
-         100% { transform: translateX(0%); }
-         }
-      </style>
-</head>
+				<!DOCTYPE html>
+				<html lang="vi">
+				<head>
+				  <meta charset="UTF-8">
+				  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				  <title>Công ty Du lịch KIM ĐỨC</title>
+					<style>
+						 body { font-family: Arial, sans-serif; margin:0; padding:0; }
+						 header { background:#0288d1; color:#fff; padding:20px; text-align:center; }
+						 nav { background:#01579b; padding:10px; text-align:center; }
+						 nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+						 section { padding:40px; max-width:1000px; margin:auto; }
+						 h2 { color:#0288d1; }
+						 .tour { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:5px; }
+						 footer { background:#0288d1; color:#fff; text-align:center; padding:15px; margin-top:30px; }
+						 /* Slide ảnh */
+						 .slider-container {
+						 position: relative;
+						 max-width: 1000px;
+						 margin: auto;
+						 overflow: hidden;
+						 border-radius: 8px;
+						 }
+						 .slides {
+						 display: flex;
+						 width: 300%; /* 3 ảnh */
+						 animation: slide 12s infinite;
+						 }
+						 .slides img {
+						 width: 100%;
+						 flex-shrink: 0;
+						 }
+						 @keyframes slide {
+						 0% { transform: translateX(0%); }
+						 25% { transform: translateX(0%); }
+						 35% { transform: translateX(-100%); }
+						 60% { transform: translateX(-100%); }
+						 70% { transform: translateX(-200%); }
+						 95% { transform: translateX(-200%); }
+						 100% { transform: translateX(0%); }
+						 }
+					  </style>
+				</head>
 
-<body>
-  <header>
-    <h1>CÔNG TY DU LỊCH KIM ĐỨC</h1>
-    <p>Uy tín - Chuyên nghiệp - Trọn vẹn niềm vui</p>
-  </header>
+				<body>
+				  <header>
+					<h1>CÔNG TY DU LỊCH KIM ĐỨC</h1>
+					<p>Uy tín - Chuyên nghiệp - Trọn vẹn niềm vui</p>
+				  </header>
 
-  <nav>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#tour">Tour</a>
-    <a href="#hinhanh">Hình ảnh</a>
-    <a href="#lienhe">Liên hệ</a>
-  </nav>
-  
-    <!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
-	<!-- Phần Slide Ảnh -->
-	<section id="hinh-anh" style="text-align:center; margin:20px auto;">
-	  <div class="slideshow-container" id="slideshow"></div>
-	</section>
+				  <nav>
+					<a href="#gioithieu">Giới thiệu</a>
+						<a href="#tour">Tour</a>
+					<a href="#hinhanh">Hình ảnh</a>
+					<a href="#lienhe">Liên hệ</a>
+				  </nav>
+				  
 
+				<!-- Phần Giới thiệu -->
+				  <section id="gioithieu">
+					<h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">Giới thiệu</h2>
+					<p>Công ty Du lịch KIM ĐỨC chuyên tổ chức tour trong nước và quốc tế. 
+					Với đội ngũ nhiệt huyết và kinh nghiệm hơn 10 năm, chúng tôi cam kết mang đến cho khách hàng trải nghiệm tuyệt vời.</p>
+				  </section>
+					
 
-	<style>
-	.slideshow-container {
-	  max-width: 1000px;
-	  position: relative;
-	  margin: auto;
-	  border-radius: 10px;
-	  overflow: hidden;
-	  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-	}
-	.slide-img {
-	  width: 100%;
-	  height: 400px;
-	  object-fit: cover;
-	  object-position: center;
-	}
-	.mySlides { display: none; }
-	.fade { animation: fadeEffect 1s; }
-	@keyframes fadeEffect {
-	  from {opacity: .4} 
-	  to {opacity: 1}
-	}
-	</style>
+				  
+				 <!-- TOUR NỔI BẬT -->
+				<section id="tour" style="padding:60px 20px; background:#f9fafb;">
+				  <h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">🌴 Tour Nổi Bật</h2>
 
-	<script>
-	const images = [
-	  "hinh1.jpg",
-	  "hinh2.jpg",
-	  "IMG_0638.JPG",
-	  "IMG_0639.JPG",
-	  "IMG_0651.jpg",
-	  "IMG_0659.jpg",
-	  "IMG_0664.JPG",
-	  "IMG_0666.JPG",
-	  "IMG_0672.JPG",
-	  "IMG_3637.jpg",
-	  "IMG_4480.jpg",
-	  "IMG_5201.jpg",
-	  "IMG_5242.jpg",
-	  "IMG_5485.JPG"
-	]; // chỉ cần thêm tên file vào đây
+				  <div class="tour-list">
 
-	const container = document.getElementById("slideshow");
-	images.forEach(img => {
-	  const div = document.createElement("div");
-	  div.className = "mySlides fade";
-	  div.innerHTML = `<img src="images/${img}" class="slide-img">`;
-	  container.appendChild(div);
-	});
+					<!-- TOUR 1 -->
+					<div class="tour-item">
+					  <div class="tour-images">
+						<img src="tournoibat/caurong.jpg" alt="">
+						<img src="tournoibat/cauvang.jpg" alt="">
+						<img src="tournoibat/hoian.jpg" alt="">
+					  </div>
+					  <div class="tour-info">
+						<h3>Tour ĐÀ NẴNG - HỘI AN 5N4Đ</h3>
+						<p>Khám phá đảo ngọc Phú Quốc – Thiên đường nghỉ dưỡng biển Việt Nam.</p>
+						<p class="price">Giá chỉ từ <strong>3.990.000₫</strong></p>
+						<button>Chi tiết</button>
+					  </div>
+					</div>
+					
+					 <!-- TOUR 2 -->
+					<div class="tour-item">
+					  <div class="tour-images">
+						<img src="tournoibat/hanoi.jpg" alt="">
+						<img src="tournoibat/halong.jpg" alt="">
+						<img src="tournoibat/sapa.jpg" alt="">
+					  </div>
+					  <div class="tour-info">
+						<h3>Tour HÀ NỘI - HẠ LONG - SAPA 5N4Đ</h3>
+						<p>Chiêm ngưỡng kỳ quan thiên nhiên thế giới – Vịnh Hạ Long tuyệt đẹp.</p>
+						<p class="price">Giá chỉ từ <strong>3.990.000₫</strong></p>
+						<button>Chi tiết</button>
+					  </div>
+					</div>
 
-	let slideIndex = 0;
-	showSlides();
-	function showSlides() {
-	  let i;
-	  let slides = document.getElementsByClassName("mySlides");
-	  for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";  
-	  }
-	  slideIndex++;
-	  if (slideIndex > slides.length) {slideIndex = 1}    
-	  slides[slideIndex-1].style.display = "block";  
-	  setTimeout(showSlides, 3000); 
-	}
-	</script>
-	
+					<!-- TOUR 3 -->
+					<div class="tour-item">
+					  <div class="tour-images">
+						<img src="tournoibat/nhatrang.jpg" alt="">
+						<img src="tournoibat/nhatrang2.jpg" alt="">
+						<img src="tournoibat/dalat.jpg" alt="">
+					  </div>
+					  <div class="tour-info">
+						<h3>Tour NHA TRANG - Đà Lạt 5N4Đ</h3>
+						<p>Hít thở không khí trong lành, thưởng thức cà phê và hoa Đà Lạt lãng mạn.</p>
+						<p class="price">Giá chỉ từ <strong>2.890.000₫</strong></p>
+						<button>Chi tiết</button>
+					  </div>
+					</div>
 
+					<!-- TOUR 4 -->
+					<div class="tour-item">
+					  <div class="tour-images">
+						<img src="tournoibat/phuquoc.jpg" alt="">
+						<img src="tournoibat/phuquoc2.jpg" alt="">
+						<img src="tournoibat/phuquoc3.jpg" alt="">
+					  </div>
+					  <div class="tour-info">
+						<h3>Tour PHÚ QUỐC 5N4Đ</h3>
+						<p>Khám phá đảo ngọc Phú Quốc – Thiên đường nghỉ dưỡng biển Việt Nam.</p>
+						<p class="price">Giá chỉ từ <strong>2.490.000₫</strong></p>
+						<button>Chi tiết</button>
+					  </div>
+					</div>
 
-  <section id="gioithieu">
-    <h2>Giới thiệu</h2>
-    <p>Công ty Du lịch KIM ĐỨC chuyên tổ chức tour trong nước và quốc tế. 
-    Với đội ngũ nhiệt huyết và kinh nghiệm hơn 10 năm, chúng tôi cam kết mang đến cho khách hàng trải nghiệm tuyệt vời.</p>
-  </section>
+				  </div>
+				</section>
 
-  <section id="tour">
-    <h2>Tour nổi bật</h2>
-    <div class="tour">
-      <h3>Đà Nẵng - Hội An 3N2Đ</h3>
-      <p>Giá từ 3.500.000đ</p>
-    </div>
-    <div class="tour">
-      <h3>Phú Quốc nghỉ dưỡng 4N3Đ</h3>
-      <p>Giá từ 5.200.000đ</p>
-    </div>
-    <div class="tour">
-      <h3>Hà Nội - Sapa - Fansipan 4N3Đ</h3>
-      <p>Giá từ 4.800.000đ</p>
-    </div>
-  </section>
+				<style>
+				.tour-list {
+				  display: flex;
+				  flex-direction: column;
+				  gap: 40px;
+				  max-width: 1000px;
+				  margin: auto;
+				}
 
-  <section id="hinhanh">
-    <h2>Hình ảnh</h2>
-    <p>(Chèn ảnh tour hoặc video giới thiệu công ty)</p>
-  </section>
+				.tour-item {
+				  background: white;
+				  border-radius: 16px;
+				  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+				  padding-bottom: 25px;
+				  overflow: hidden;
+				  transition: transform .3s ease, box-shadow .3s ease;
+				}
+				.tour-item:hover {
+				  transform: translateY(-5px);
+				  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+				}
 
-  <section id="lienhe">
-    <h2>Liên hệ</h2>
-    <p>Công ty Du lịch KIM ĐỨC</p>
-    <p>📍 Địa chỉ: Số xx, Quận yy, TP.HCM</p>
-    <p>📞 Hotline: 098x xxx xxx</p>
-    <p>✉️ Email: info@dulichabc.com</p>
-  </section>
+				/* Ảnh 3 cột ngang */
+				.tour-images {
+				  display: grid;
+				  grid-template-columns: repeat(3, 1fr);
+				}
+				.tour-images img {
+				  width: 100%;
+				  height: 220px;
+				  object-fit: cover;
+				}
 
-  <footer>
-    <p>© 2025 Công ty Du lịch KIM ĐỨC</p>
-  </footer>
+				/* Phần thông tin */
+				.tour-info {
+				  text-align: center;
+				  padding: 20px;
+				}
+				.tour-info h3 {
+				  color: #1e40af;
+				  margin-bottom: 10px;
+				}
+				.tour-info p {
+				  color: #555;
+				  margin-bottom: 8px;
+				  font-size: 15px;
+				}
+				.tour-info .price {
+				  color: #e11d48;
+				  font-weight: bold;
+				}
+				.tour-info button {
+				  background: #1e40af;
+				  color: white;
+				  border: none;
+				  padding: 10px 22px;
+				  border-radius: 6px;
+				  cursor: pointer;
+				  transition: background .3s;
+				}
+				.tour-info button:hover {
+				  background: #2563eb;
+				}
+				</style>
 
-</body>
-</html>
+			<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
+					<!-- Phần Slide Ảnh -->
+					  <section id="hinhanh">
+					<h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">Hình ảnh</h2>
+				  </section>
+					<section id="hinh-anh" style="text-align:center; margin:20px auto;">
+					  <div class="slideshow-container" id="slideshow"></div>
+					</section>
+					<style>
+					.slideshow-container {
+					  max-width: 1000px;
+					  position: relative;
+					  margin: auto;
+					  border-radius: 10px;
+					  overflow: hidden;
+					  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+					}
+					.slide-img {
+					  width: 100%;
+					  height: 400px;
+					  object-fit: cover;
+					  object-position: center;
+					}
+					.mySlides { display: none; }
+					.fade { animation: fadeEffect 1s; }
+					@keyframes fadeEffect {
+					  from {opacity: .4} 
+					  to {opacity: 1}
+					}
+					</style>
+
+					<script>
+					const images = [
+					  "hinh1.jpg",
+					  "hinh2.jpg",
+					  "IMG_0638.JPG",
+					  "IMG_0639.JPG",
+					  "IMG_0651.jpg",
+					  "IMG_0659.jpg",
+					  "IMG_0664.JPG",
+					  "IMG_0666.JPG",
+					  "IMG_0672.JPG",
+					  "IMG_3637.jpg",
+					  "IMG_4480.jpg",
+					  "IMG_5201.jpg",
+					  "IMG_5242.jpg",
+					  "IMG_5485.JPG"
+					]; // chỉ cần thêm tên file vào đây
+
+					const container = document.getElementById("slideshow");
+					images.forEach(img => {
+					  const div = document.createElement("div");
+					  div.className = "mySlides fade";
+					  div.innerHTML = `<img src="images/${img}" class="slide-img">`;
+					  container.appendChild(div);
+					});
+
+					let slideIndex = 0;
+					showSlides();
+					function showSlides() {
+					  let i;
+					  let slides = document.getElementsByClassName("mySlides");
+					  for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					  }
+					  slideIndex++;
+					  if (slideIndex > slides.length) {slideIndex = 1}    
+					  slides[slideIndex-1].style.display = "block";  
+					  setTimeout(showSlides, 3000); 
+					}
+					</script>
+				  <section id="lienhe">
+					<h2>Liên hệ</h2>
+					<p>Công ty Du lịch KIM ĐỨC</p>
+					<p>📍 Địa chỉ: Số xx, Quận yy, TP.HCM</p>
+					<p>📞 Hotline: 098x xxx xxx</p>
+					<p>✉️ Email: info@dulichabc.com</p>
+				  </section>
+
+				  <footer>
+					<p>© 2025 Công ty Du lịch KIM ĐỨC</p>
+				  </footer>
+
+				</body>
+				</html>
