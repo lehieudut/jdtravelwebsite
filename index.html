@@ -1,4 +1,4 @@
-				<!DOCTYPE html>
+			<!DOCTYPE html>
 				<html lang="vi">
 				<head>
 				  <meta charset="UTF-8">
@@ -202,74 +202,199 @@
 			<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
 					<!-- Phần Slide Ảnh -->
 					  <section id="hinhanh">
-					<h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">Hình ảnh</h2>
+					<h2 style="text-align:center; font-size:2em; margin-bottom:10px; color:#333;">Hình ảnh</h2>
 				  </section>
-					<section id="hinh-anh" style="text-align:center; margin:20px auto;">
-					  <div class="slideshow-container" id="slideshow"></div>
-					</section>
-					<style>
-					.slideshow-container {
-					  max-width: 1000px;
-					  position: relative;
-					  margin: auto;
-					  border-radius: 10px;
-					  overflow: hidden;
-					  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-					}
-					.slide-img {
-					  width: 100%;
-					  height: 400px;
-					  object-fit: cover;
-					  object-position: center;
-					}
-					.mySlides { display: none; }
-					.fade { animation: fadeEffect 1s; }
-					@keyframes fadeEffect {
-					  from {opacity: .4} 
-					  to {opacity: 1}
-					}
-					</style>
+		
+				<style>
+					    body {
+						  font-family: sans-serif;
+						  background-color: #f5f5f5;
+						  padding: 20px;
+						  text-align: center;
+						}
 
-					<script>
-					const images = [
-					  "hinh1.jpg",
-					  "hinh2.jpg",
-					  "IMG_0638.JPG",
-					  "IMG_0639.JPG",
-					  "IMG_0651.jpg",
-					  "IMG_0659.jpg",
-					  "IMG_0664.JPG",
-					  "IMG_0666.JPG",
-					  "IMG_0672.JPG",
-					  "IMG_3637.jpg",
-					  "IMG_4480.jpg",
-					  "IMG_5201.jpg",
-					  "IMG_5242.jpg",
-					  "IMG_5485.JPG"
-					]; // chỉ cần thêm tên file vào đây
+						.gallery {
+						  display: grid;
+						  grid-template-columns: repeat(4, 1fr);
+						  gap: 10px;
+						  justify-items: center;
+						  max-width: 800px;
+						  margin: 0 auto;
+						}
 
-					const container = document.getElementById("slideshow");
-					images.forEach(img => {
-					  const div = document.createElement("div");
-					  div.className = "mySlides fade";
-					  div.innerHTML = `<img src="images/${img}" class="slide-img">`;
-					  container.appendChild(div);
-					});
+						.gallery img {
+						  width: 100%;
+						  max-width: 250px;
+						  height: 200px;
+						  object-fit: cover;
+						  border-radius: 10px;
+						  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+						  cursor: pointer;
+						  transition: transform 0.2s;
+						}
 
-					let slideIndex = 0;
-					showSlides();
-					function showSlides() {
-					  let i;
-					  let slides = document.getElementsByClassName("mySlides");
-					  for (i = 0; i < slides.length; i++) {
-						slides[i].style.display = "none";  
-					  }
-					  slideIndex++;
-					  if (slideIndex > slides.length) {slideIndex = 1}    
-					  slides[slideIndex-1].style.display = "block";  
-					  setTimeout(showSlides, 3000); 
-					}
-					</script>
+						.gallery img:hover {
+						  transform: scale(1.05);
+						}
+
+						button {
+						  margin-top: 20px;
+						  padding: 10px 20px;
+						  font-size: 16px;
+						  border: none;
+						  background-color: #007bff;
+						  color: white;
+						  border-radius: 6px;
+						  cursor: pointer;
+						}
+
+						button:hover {
+						  background-color: #0056b3;
+						}
+
+						/* Hộp phóng to ảnh */
+						.lightbox {
+						  display: none;
+						  position: fixed;
+						  top: 0;
+						  left: 0;
+						  width: 100%;
+						  height: 100%;
+						  background: rgba(0,0,0,0.8);
+						  justify-content: center;
+						  align-items: center;
+						  z-index: 999;
+						}
+
+						.lightbox img {
+						  max-width: 90%;
+						  max-height: 80%;
+						  border-radius: 10px;
+						  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+						}
+
+						.close, .prev, .next {
+						  position: absolute;
+						  top: 50%;
+						  transform: translateY(-50%);
+						  background: rgba(255,255,255,0.3);
+						  color: white;
+						  font-size: 40px;
+						  border: none;
+						  cursor: pointer;
+						  padding: 10px;
+						  border-radius: 50%;
+						  user-select: none;
+						}
+
+						.close {
+						  top: 40px;
+						  right: 40px;
+						  transform: none;
+						}
+
+						.prev {
+						  left: 50px;
+						}
+
+						.next {
+						  right: 50px;
+						}
+
+						.close:hover, .prev:hover, .next:hover {
+						  background: rgba(255,255,255,0.6);
+						}
+				  </style>
+					
+
+<!---- Hình ảnh -->
+
+  <div class="gallery" id="gallery"></div>
+  <button onclick="hienThiAnh()">Hiển thị ảnh khác</button>
+
+	<!-- Lightbox -->
+	  <div class="lightbox" id="lightbox">
+		<button class="close" onclick="dongLightbox()">×</button>
+		<button class="prev" onclick="chuyenAnh(-1)">❮</button>
+		<img id="lightboxImg" src="">
+		<button class="next" onclick="chuyenAnh(1)">❯</button>
+	  </div>
+	<script>
+		const hinhanh = [
+		  "hinh1.jpg",
+		  "hinh2.jpg",
+		  "IMG_0638.JPG",
+		  "IMG_0639.JPG",
+		  "IMG_0651.jpg",
+		  "IMG_0659.jpg",
+		  "IMG_0664.JPG",
+		  "IMG_0666.JPG",
+		  "IMG_0672.JPG",
+		  "IMG_3637.jpg",
+		  "IMG_4480.jpg",
+		  "IMG_5201.jpg",
+		  "IMG_5242.jpg",
+		  "IMG_5485.JPG"
+		]; // thêm tên file tại đây
+		
+		let danhSachDangHien = [];
+		let chiSoHienTai = 0;
+		
+	   function hienThiAnh() {
+      const gallery = document.getElementById("gallery");
+      gallery.innerHTML = "";
+
+      // Chọn 9 ảnh ngẫu nhiên
+      danhSachDangHien = hinhanh
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 12);
+
+      // Hiển thị ảnh
+      danhSachDangHien.forEach((tenFile, index) => {
+        const img = document.createElement("img");
+        img.src = "hinhanh/" + tenFile;
+        img.onclick = () => moLightbox(index);
+        gallery.appendChild(img);
+      });
+    }
+		
+				 function moLightbox(index) {
+			  chiSoHienTai = index;
+			  const lightbox = document.getElementById("lightbox");
+			  const lightboxImg = document.getElementById("lightboxImg");
+			  lightboxImg.src = "hinhanh/" + danhSachDangHien[index];
+			  lightbox.style.display = "flex";
+			}
+
+			function dongLightbox() {
+			  document.getElementById("lightbox").style.display = "none";
+			}
+
+			function chuyenAnh(huong) {
+			  chiSoHienTai += huong;
+			  if (chiSoHienTai < 0) chiSoHienTai = danhSachDangHien.length - 1;
+			  if (chiSoHienTai >= danhSachDangHien.length) chiSoHienTai = 0;
+			  document.getElementById("lightboxImg").src = "hinhanh/" + danhSachDangHien[chiSoHienTai];
+			}
+
+			// Bấm phím ← hoặc → để chuyển ảnh
+			document.addEventListener("keydown", (e) => {
+			  const lightbox = document.getElementById("lightbox");
+			  if (lightbox.style.display === "flex") {
+				if (e.key === "ArrowLeft") chuyenAnh(-1);
+				if (e.key === "ArrowRight") chuyenAnh(1);
+				if (e.key === "Escape") dongLightbox();
+			  }
+			});
+
+		// Tải trang là hiển thị ảnh ngay
+		hienThiAnh();
+</script>
+
+
+
+<!-- Lien he -->
+
 				  <section id="lienhe">
 					<h2>Liên hệ</h2>
 					<p>Công ty Du lịch KIM ĐỨC</p>
