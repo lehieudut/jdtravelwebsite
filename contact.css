@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+
+
+/* --- Tổng thể --- */
+.contact {
+  background-color: #fdfdfd; /* bạn có thể đổi màu nền ở đây */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.contact h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0B1E34;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-style: italic;
+  color: #0B1E34;
+  margin-bottom: 25px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #0B1E34;
+  margin-bottom: 50px;
+}
+
+/* --- Khung chính --- */
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;   /* sắp xếp dọc */
+  align-items: center;      /* căn giữa ngang */
+}
+
+/* --- Tiêu đề --- */
+.contact-container h2 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.contact-container h2::before {
+  content: "ℹ️";
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+/* --- Danh sách thông tin --- */
+.contact-list {
+  list-style-type: disc;
+  text-align: left;
+  margin: 0 0 30px 0; /* tạo khoảng cách giữa list và nút LINE */
+  padding-left: 20px;
+  align-self: center;  /* đảm bảo căn giữa theo container */
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 15px;
+}
+
+.contact-list li span {
+  color: #d14479; /* màu hồng như hình mẫu */
+  font-weight: 500;
+}
+
+/* --- Nút LINE --- */
+.line-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #00b900;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;       /* đẩy nút xuống dưới cùng nếu cần */
+}
+
+
+.line-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.line-btn:hover {
+  background-color: #009a00;
+  transform: scale(1.05);
+}

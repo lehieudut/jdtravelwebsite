@@ -1,59 +1,34 @@
 			<!DOCTYPE html>
 				<html lang="vi">
-				<head>
-				  <meta charset="UTF-8">
-				  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-				  <title>Công ty Du lịch KIM ĐỨC</title>
-					<style>
-						 body { font-family: Arial, sans-serif; margin:0; padding:0; }
-						 header { background:#0288d1; color:#fff; padding:20px; text-align:center; }
-						 nav { background:#01579b; padding:10px; text-align:center; }
-						 nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-						 section { padding:40px; max-width:1000px; margin:auto; }
-						 h2 { color:#0288d1; }
-						 .tour { border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:5px; }
-						 footer { background:#0288d1; color:#fff; text-align:center; padding:15px; margin-top:30px; }
-						 /* Slide ảnh */
-						 .slider-container {
-						 position: relative;
-						 max-width: 1000px;
-						 margin: auto;
-						 overflow: hidden;
-						 border-radius: 8px;
-						 }
-						 .slides {
-						 display: flex;
-						 width: 300%; /* 3 ảnh */
-						 animation: slide 12s infinite;
-						 }
-						 .slides img {
-						 width: 100%;
-						 flex-shrink: 0;
-						 }
-						 @keyframes slide {
-						 0% { transform: translateX(0%); }
-						 25% { transform: translateX(0%); }
-						 35% { transform: translateX(-100%); }
-						 60% { transform: translateX(-100%); }
-						 70% { transform: translateX(-200%); }
-						 95% { transform: translateX(-200%); }
-						 100% { transform: translateX(0%); }
-						 }
-					  </style>
-				</head>
+			<head>
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			  <title>JD Travel</title>
+			  <link rel="stylesheet" href="style.css">
+			</head>
 
 				<body>
-				  <header>
-					<h1>CÔNG TY DU LỊCH KIM ĐỨC</h1>
-					<p>Uy tín - Chuyên nghiệp - Trọn vẹn niềm vui</p>
-				  </header>
+				<header class="navbar">
+				<div class="logo">
+					  <img src="icon/logo.jpg" alt="JD Travel Logo">
+					  <h1>JD TRAVEL</h1>
+					</div>
 
-				  <nav>
-					<a href="#gioithieu">Giới thiệu</a>
-						<a href="#tour">Tour</a>
-					<a href="#hinhanh">Hình ảnh</a>
-					<a href="#lienhe">Liên hệ</a>
-				  </nav>
+					<nav class="menu">
+					  <a href="#">首頁</a>
+					  <a href="#">旅遊地點</a>
+					  <a href="#">旅遊方案</a>
+					  <a href="#">優惠活動</a>
+					  <a href="#">關於我們</a>
+					  <a href="#">聯絡我們</a>
+					</nav>
+
+					<div class="icons">
+					  <img src="icon/line_contact.png">
+					  <img src="icon/icon_facebook.png">
+					  <img src="icon/icon_email.png" >
+					</div>
+			  </header>
 				  
 
 				<!-- Phần Giới thiệu -->
@@ -134,70 +109,7 @@
 				  </div>
 				</section>
 
-				<style>
-				.tour-list {
-				  display: flex;
-				  flex-direction: column;
-				  gap: 40px;
-				  max-width: 1000px;
-				  margin: auto;
-				}
-
-				.tour-item {
-				  background: white;
-				  border-radius: 16px;
-				  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-				  padding-bottom: 25px;
-				  overflow: hidden;
-				  transition: transform .3s ease, box-shadow .3s ease;
-				}
-				.tour-item:hover {
-				  transform: translateY(-5px);
-				  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-				}
-
-				/* Ảnh 3 cột ngang */
-				.tour-images {
-				  display: grid;
-				  grid-template-columns: repeat(3, 1fr);
-				}
-				.tour-images img {
-				  width: 100%;
-				  height: 220px;
-				  object-fit: cover;
-				}
-
-				/* Phần thông tin */
-				.tour-info {
-				  text-align: center;
-				  padding: 20px;
-				}
-				.tour-info h3 {
-				  color: #1e40af;
-				  margin-bottom: 10px;
-				}
-				.tour-info p {
-				  color: #555;
-				  margin-bottom: 8px;
-				  font-size: 15px;
-				}
-				.tour-info .price {
-				  color: #e11d48;
-				  font-weight: bold;
-				}
-				.tour-info button {
-				  background: #1e40af;
-				  color: white;
-				  border: none;
-				  padding: 10px 22px;
-				  border-radius: 6px;
-				  cursor: pointer;
-				  transition: background .3s;
-				}
-				.tour-info button:hover {
-				  background: #2563eb;
-				}
-				</style>
+			
 
 			<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
 					<!-- Phần Slide Ảnh -->
@@ -205,106 +117,6 @@
 					<h2 style="text-align:center; font-size:2em; margin-bottom:10px; color:#333;">Hình ảnh</h2>
 				  </section>
 		
-				<style>
-					    body {
-						  font-family: sans-serif;
-						  background-color: #f5f5f5;
-						  padding: 20px;
-						  text-align: center;
-						}
-
-						.gallery {
-						  display: grid;
-						  grid-template-columns: repeat(4, 1fr);
-						  gap: 10px;
-						  justify-items: center;
-						  max-width: 800px;
-						  margin: 0 auto;
-						}
-
-						.gallery img {
-						  width: 100%;
-						  max-width: 250px;
-						  height: 200px;
-						  object-fit: cover;
-						  border-radius: 10px;
-						  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-						  cursor: pointer;
-						  transition: transform 0.2s;
-						}
-
-						.gallery img:hover {
-						  transform: scale(1.05);
-						}
-
-						button {
-						  margin-top: 20px;
-						  padding: 10px 20px;
-						  font-size: 16px;
-						  border: none;
-						  background-color: #007bff;
-						  color: white;
-						  border-radius: 6px;
-						  cursor: pointer;
-						}
-
-						button:hover {
-						  background-color: #0056b3;
-						}
-
-						/* Hộp phóng to ảnh */
-						.lightbox {
-						  display: none;
-						  position: fixed;
-						  top: 0;
-						  left: 0;
-						  width: 100%;
-						  height: 100%;
-						  background: rgba(0,0,0,0.8);
-						  justify-content: center;
-						  align-items: center;
-						  z-index: 999;
-						}
-
-						.lightbox img {
-						  max-width: 90%;
-						  max-height: 80%;
-						  border-radius: 10px;
-						  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-						}
-
-						.close, .prev, .next {
-						  position: absolute;
-						  top: 50%;
-						  transform: translateY(-50%);
-						  background: rgba(255,255,255,0.3);
-						  color: white;
-						  font-size: 40px;
-						  border: none;
-						  cursor: pointer;
-						  padding: 10px;
-						  border-radius: 50%;
-						  user-select: none;
-						}
-
-						.close {
-						  top: 40px;
-						  right: 40px;
-						  transform: none;
-						}
-
-						.prev {
-						  left: 50px;
-						}
-
-						.next {
-						  right: 50px;
-						}
-
-						.close:hover, .prev:hover, .next:hover {
-						  background: rgba(255,255,255,0.6);
-						}
-				  </style>
 					
 
 <!---- Hình ảnh -->
@@ -395,16 +207,15 @@
 
 <!-- Lien he -->
 
-				  <section id="lienhe">
-					<h2>Liên hệ</h2>
-					<p>Công ty Du lịch KIM ĐỨC</p>
-					<p>📍 Địa chỉ: Số xx, Quận yy, TP.HCM</p>
-					<p>📞 Hotline: 098x xxx xxx</p>
-					<p>✉️ Email: info@dulichabc.com</p>
-				  </section>
+
+				  
+				  <section id="contact">
+					<iframe src="contact.html" style="width:100%; height:600px; border:none;"></iframe>
+</section>
+
 
 				  <footer>
-					<p>© 2025 Công ty Du lịch KIM ĐỨC</p>
+					<p>© JD Travel All Rights Reserved.</p>
 				  </footer>
 
 				</body>
