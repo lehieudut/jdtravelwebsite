@@ -5,6 +5,9 @@
 			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 			  <title>JD Travel</title>
 			  <link rel="stylesheet" href="style.css">
+			  <link rel="stylesheet" href="contact.css">
+			  <link rel="stylesheet" href="hoptac.css">
+			  <link rel="stylesheet" href="diadiem.css">
 			</head>
 
 				<body>
@@ -31,86 +34,101 @@
 			  </header>
 				  
 
-				<!-- Phần Giới thiệu -->
-				  <section id="gioithieu">
-					<h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">Giới thiệu</h2>
-					<p>Công ty Du lịch KIM ĐỨC chuyên tổ chức tour trong nước và quốc tế. 
-					Với đội ngũ nhiệt huyết và kinh nghiệm hơn 10 năm, chúng tôi cam kết mang đến cho khách hàng trải nghiệm tuyệt vời.</p>
+				<!-- Phần Giới thiệu -->	
+				<section id="gioithieu">
+				
+					<h2 class="brand-title">品牌理念</h2>
+
+					<p class="text-sm text-gray-500 mb-8">Brand Philosophy</p>
+
+					<!-- Content -->
+					<p class="text-lg font-bold leading-relaxed mb-4" style="color: #2C3144;">
+					  「<strong>JD Travel 金德旅游</strong>」——夢想的起點，體驗的巔峰，收藏的永恆
+					</p>
+
+					<p class="text-gray-700 leading-relaxed mb-3">
+					  是追求鴻鵠大志的生命旅程，是無與倫比的奢華享受。
+					</p>
+					<p class="text-gray-700 leading-relaxed mb-3">
+					  每一趟旅行，都是一場創作，每一份回憶，都是無價的珍藏。
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+					  我們以創意挑戰極限，以服務精雕細琢，只為將您心中的夢想旅程化為現實。
+					</p>
 				  </section>
-					
+				
 
-				  
-				 <!-- TOUR NỔI BẬT -->
-				<section id="tour" style="padding:60px 20px; background:#f9fafb;">
-				  <h2 style="text-align:center; font-size:2em; margin-bottom:30px; color:#333;">🌴 Tour Nổi Bật</h2>
+<section id="diadiem-section">
+  <h2>旅遊地點</h2>
 
-				  <div class="tour-list">
+  <div class="category-bar">
+    <button class="active" onclick="showCategory('recommended')">鴻軒首推</button>
+    <button onclick="showCategory('island')">海島渡假</button>
+    <button onclick="showCategory('eastasia')">東北亞</button>
+    <button onclick="showCategory('southeast')">東南亞</button>
+    <button onclick="showCategory('europe')">歐洲</button>
+  </div>
 
-					<!-- TOUR 1 -->
-					<div class="tour-item">
-					  <div class="tour-images">
-						<img src="tournoibat/caurong.jpg" alt="">
-						<img src="tournoibat/cauvang.jpg" alt="">
-						<img src="tournoibat/hoian.jpg" alt="">
-					  </div>
-					  <div class="tour-info">
-						<h3>Tour ĐÀ NẴNG - HỘI AN 5N4Đ</h3>
-						<p>Khám phá đảo ngọc Phú Quốc – Thiên đường nghỉ dưỡng biển Việt Nam.</p>
-						<p class="price">Giá chỉ từ <strong>3.990.000₫</strong></p>
-						<button>Chi tiết</button>
-					  </div>
-					</div>
-					
-					 <!-- TOUR 2 -->
-					<div class="tour-item">
-					  <div class="tour-images">
-						<img src="tournoibat/hanoi.jpg" alt="">
-						<img src="tournoibat/halong.jpg" alt="">
-						<img src="tournoibat/sapa.jpg" alt="">
-					  </div>
-					  <div class="tour-info">
-						<h3>Tour HÀ NỘI - HẠ LONG - SAPA 5N4Đ</h3>
-						<p>Chiêm ngưỡng kỳ quan thiên nhiên thế giới – Vịnh Hạ Long tuyệt đẹp.</p>
-						<p class="price">Giá chỉ từ <strong>3.990.000₫</strong></p>
-						<button>Chi tiết</button>
-					  </div>
-					</div>
+  <div id="diadiem" class="diadiem"></div>
+</section>
 
-					<!-- TOUR 3 -->
-					<div class="tour-item">
-					  <div class="tour-images">
-						<img src="tournoibat/nhatrang.jpg" alt="">
-						<img src="tournoibat/nhatrang2.jpg" alt="">
-						<img src="tournoibat/dalat.jpg" alt="">
-					  </div>
-					  <div class="tour-info">
-						<h3>Tour NHA TRANG - Đà Lạt 5N4Đ</h3>
-						<p>Hít thở không khí trong lành, thưởng thức cà phê và hoa Đà Lạt lãng mạn.</p>
-						<p class="price">Giá chỉ từ <strong>2.890.000₫</strong></p>
-						<button>Chi tiết</button>
-					  </div>
-					</div>
+<script>
+const destinations = {
+  recommended: [
+    { name: "日本", img: "diadiem/halong.jpg" },
+    { name: "越南", img: "diadiem/hanoi.jpg" },
+    { name: "不丹", img: "diadiem/sapa.jpg" },
+    { name: "馬爾地夫", img: "diadiem/halong.jpg" },
+    { name: "新加坡", img: "diadiem/hanoi.jpg" },
+    { name: "泰國", img: "diadiem/sapa.jpg" }
+  ],
+  island: [
+    { name: "峇里島", img: "diadiem/halong.jpg" },
+    { name: "塞席爾", img: "diadiem/hanoi.jpg" },
+    { name: "斐濟", img: "diadiem/sapa.jpg" },
+    { name: "夏威夷", img: "diadiem/halong.jpg" }
+  ],
+  eastasia: [
+    { name: "日本", img: "diadiem/halong.jpg" },
+    { name: "韓國", img: "diadiem/hanoi.jpg" },
+    { name: "中國", img: "diadiem/sapa.jpg" }
+  ],
+  southeast: [
+    { name: "越南", img: "diadiem/halong.jpg" },
+    { name: "泰國", img: "diadiem/hanoi.jpg" },
+    { name: "新加坡", img: "diadiem/sapa.jpg" },
+    { name: "馬來西亞", img: "diadiem/halong.jpg" }
+  ],
+  europe: [
+    { name: "法國", img: "diadiem/halong.jpg" },
+    { name: "義大利", img: "diadiem/hanoi.jpg" },
+    { name: "瑞士", img: "diadiem/sapa.jpg" }
+  ],
+};
 
-					<!-- TOUR 4 -->
-					<div class="tour-item">
-					  <div class="tour-images">
-						<img src="tournoibat/phuquoc.jpg" alt="">
-						<img src="tournoibat/phuquoc2.jpg" alt="">
-						<img src="tournoibat/phuquoc3.jpg" alt="">
-					  </div>
-					  <div class="tour-info">
-						<h3>Tour PHÚ QUỐC 5N4Đ</h3>
-						<p>Khám phá đảo ngọc Phú Quốc – Thiên đường nghỉ dưỡng biển Việt Nam.</p>
-						<p class="price">Giá chỉ từ <strong>2.490.000₫</strong></p>
-						<button>Chi tiết</button>
-					  </div>
-					</div>
+function showCategory(cat) {
+  document.querySelectorAll('.category-bar button').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
 
-				  </div>
-				</section>
+  const diadiem = document.getElementById('diadiem');
+  diadiem.innerHTML = destinations[cat].map(place => `
+    <div class="diadiem-item">
+      <img src="${place.img}" alt="${place.name}">
+      <div class="country-name">${place.name}</div>
+    </div>
+  `).join('');
+}
+
+// Khi trang vừa load xong, tự chọn nút đầu tiên (鴻軒首推)
+window.addEventListener("DOMContentLoaded", () => {
+  const firstBtn = document.querySelector(".category-bar button");
+  if (firstBtn) firstBtn.click();
+});
+</script>
+
+
 
 			
-
 			<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
 					<!-- Phần Slide Ảnh -->
 					  <section id="hinhanh">
@@ -194,7 +212,7 @@
 			  const lightbox = document.getElementById("lightbox");
 			  if (lightbox.style.display === "flex") {
 				if (e.key === "ArrowLeft") chuyenAnh(-1);
-				if (e.key === "ArrowRight") chuyenAnh(1);
+				if (e.key === "ArrowRight") chuyenAnh(1);	
 				if (e.key === "Escape") dongLightbox();
 			  }
 			});
@@ -203,20 +221,241 @@
 		hienThiAnh();
 </script>
 
+				<section class="hoptac-wrap">
+		  <div class="hoptac-handshake">
+			<!-- icon bắt tay (svg) -->
+			<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+			  <rect width="64" height="64" rx="8" fill="transparent"/>
+			  <path d="M18 38l8-8 6 6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M46 26l-8 8-6-6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M20 40c-2 2-1 6 2 8 3 2 7 1 9-1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M44 22c2-2 1-6-2-8-3-2-7-1-9 1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		  </div>
+
+		  <h2 class="hoptac-title">合作夥伴</h2>
+
+		  <!-- Carousel 1 -->
+		  <div class="hoptac-carousel" data-carousel-index="0">
+			<div class="hoptac-viewport">
+			  <div class="hoptac-track">
+				  <div class="hoptac-item"><img src="hoptac/ThePeninsulaHotelsLogo.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/FourSeason.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/SixSenses.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/intercontinental.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/aman.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
+				  
+				    <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="hoptac-divider"></div>
+
+		  <!-- Carousel 2 -->
+		  <div class="hoptac-carousel" data-carousel-index="1">
+			<div class="hoptac-viewport">
+			  <div class="hoptac-track">
+				 <div class="hoptac-item"><img src="hoptac/wyndham.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/awaken.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/hilton.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/pullman.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/radisson.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/ihg.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/sheraton.png" alt=""></div>
+				   <div class="hoptac-item"><img src="hoptac/rosewood.png" alt=""></div>
+				   
+				     <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
+			  </div>
+			</div>
+		  </div>
+		</section>
 
 
 <!-- Lien he -->
+			
+			<section class="contact">
+				<h2>與我們對話</h2>
+				<p class="quote">「 每一段旅程的起點，始於一場對話。」</p>
+				<p class="desc">
+				  無論是一趟奢華度假、文化探索，還是獨一無二的冒險挑戰，<br>
+				  我們深信旅行的價值來自於細節的用心。<br><br>
+				  請告訴我們您的基本需求，讓 JD TRAVEL 的專家團隊為您量身規劃夢幻旅程。<br>
+				  立即聯繫我們，開啟專屬您的旅行故事吧！
+				</p>
 
+				 <div class="contact-container">
+				<h2>聯繫資訊</h2>
 
-				  
-				  <section id="contact">
-					<iframe src="contact.html" style="width:100%; height:600px; border:none;"></iframe>
-</section>
+				<ul class="contact-list">
+				  <li>官方LINE帳號：<span>@jdtravel</span></li>
+				  <li>客服專線：<span>+886 7742-8965</span></li>
+				  <li>電子郵件：<span>kimductravel@gmail.com</span></li>
+				  <li>公司地址：<span>105台北市光復南路65號12樓</span></li>
+				  <li>營業時間：<span>週一至週五 09:30–18:30</span></li>
+				</ul>
+
+				<a href="#" class="line-btn">
+				  <img src="icon/line_contact.png" alt="LINE">
+				  <span>加入官方LINE</span>
+				</a>
+			  </div>
+			  </section>
 
 
 				  <footer>
 					<p>© JD Travel All Rights Reserved.</p>
 				  </footer>
+				
+				<!-- Scroll phan hoptac -->
+				<script>
+			/*
+  Logic:
+  - Nhân đôi nội dung track để tạo hiệu ứng loop mượt (append clone).
+  - Dùng scrollLeft của viewport và scrollBy({behavior:'smooth'}) để auto scroll.
+  - Auto scroll tiến 1 item mỗi 5s.
+  - Hai carousel bắt đầu khác nhau: carousel 0 bắt đầu ngay, carousel 1 có delay 1s (không đồng bộ).
+  - Kéo chuột/touch: pointer events, khi kéo dừng auto, khi thả resume.
+*/
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const CAROUSEL_INTERVAL = 5000; // 5s mỗi bước
+  const TRANSITION_MS = 600; // thời gian scroll 'smooth' (browsers ignore ms param for scroll, ok)
+  const carousels = Array.from(document.querySelectorAll('.hoptac-carousel'));
+
+  carousels.forEach((c, idx)=>{
+    const viewport = c.querySelector('.hoptac-viewport');
+    const track = c.querySelector('.hoptac-track');
+
+    // clone tất cả items 1 lần để loop mượt
+    const items = Array.from(track.children);
+    items.forEach(node => track.appendChild(node.cloneNode(true)));
+
+    // calculate item width (dynamically)
+    function getItemWidth(){
+      const first = track.querySelector('.hoptac-item');
+      if(!first) return 200;
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.gap || style.columnGap || 0);
+      return first.getBoundingClientRect().width + gap;
+    }
+
+    // ensure initial scroll position small offset so reset logic nhẹ nhàng
+    viewport.scrollLeft = 0;
+
+    // auto-scroll logic
+    let autoTimer = null;
+    let isPointerDown = false;
+    let pointerId = null;
+
+    function startAuto(withDelay = 0){
+      stopAuto();
+      autoTimer = setTimeout(function step(){
+        // scroll by item width
+        const itemW = getItemWidth();
+        // smooth scroll by left
+        viewport.scrollBy({ left: itemW, behavior: 'smooth' });
+        // schedule next
+        autoTimer = setTimeout(step, CAROUSEL_INTERVAL);
+      }, withDelay);
+    }
+
+    function stopAuto(){
+      if(autoTimer){ clearTimeout(autoTimer); autoTimer = null; }
+    }
+
+    // loop reset: khi scrollLeft vượt quá 1 nửa (vì chúng ta đã clone items),
+    // ta nhảy về vị trí tương tự -nửa mà không animation
+    function checkAndResetLoop(){
+      // tổng scrollable width
+      const full = track.scrollWidth;
+      const half = full / 2;
+      if(viewport.scrollLeft >= half){
+        // copy vị trí - half
+        viewport.scrollLeft = viewport.scrollLeft - half;
+      } else if (viewport.scrollLeft <= 0){
+        // edge case (nếu user kéo ngược), nhảy +half
+        viewport.scrollLeft = viewport.scrollLeft + half;
+      }
+    }
+
+    // Thêm listener để sau khi scroll mượt xong thì check loop.
+    // Các browsers không cung cấp event 'scrollend' chuẩn; dùng timeout nhỏ sau mỗi scroll.
+    let scrollEndTimer = null;
+    viewport.addEventListener('scroll', ()=>{
+      if(scrollEndTimer) clearTimeout(scrollEndTimer);
+      scrollEndTimer = setTimeout(()=> {
+        checkAndResetLoop();
+      }, 120); // sau khi scroll xong
+    });
+
+    // Pointer drag (desktop + touch)
+    let startX = 0, startScroll = 0;
+    function onPointerDown(e){
+      isPointerDown = true;
+      pointerId = e.pointerId;
+      startX = e.clientX;
+      startScroll = viewport.scrollLeft;
+      viewport.setPointerCapture(pointerId);
+      stopAuto();
+    }
+    function onPointerMove(e){
+      if(!isPointerDown) return;
+      const dx = e.clientX - startX;
+      viewport.scrollLeft = startScroll - dx;
+      // không check loop ở mỗi bước (chậm), sẽ check on scroll end timer
+    }
+    function onPointerUp(e){
+      if(!isPointerDown) return;
+      isPointerDown = false;
+      try{ viewport.releasePointerCapture(pointerId); } catch(e){}
+      // resume auto, small delay so user thấy mượt
+      startAuto(1000);
+    }
+
+    viewport.addEventListener('pointerdown', onPointerDown);
+    viewport.addEventListener('pointermove', onPointerMove);
+    viewport.addEventListener('pointerup', onPointerUp);
+    viewport.addEventListener('pointercancel', onPointerUp);
+    viewport.addEventListener('pointerleave', onPointerUp);
+
+    // also support wheel horizontal (ctrl+wheel or shift)
+    viewport.addEventListener('wheel', (e)=>{
+      if(Math.abs(e.deltaX) > 0 || Math.abs(e.deltaY) > 0){
+        // allow user scroll horizontally with mouse wheel
+        stopAuto();
+        viewport.scrollLeft += e.deltaY || e.deltaX;
+        // resume after short delay
+        if(autoTimer) clearTimeout(autoTimer);
+        setTimeout(()=> startAuto(CAROUSEL_INTERVAL), 1000);
+      }
+    }, {passive:true});
+
+    // Khởi động: carousel đầu chạy ngay, carousel thứ 2 bắt đầu sau 1 giây
+	if (idx === 1) {
+	  setTimeout(() => startAuto(0), 1000); // chạy sau 1s thật
+	} else {
+	  startAuto(0);
+	}
+
+
+    // responsive: khi resize calc lại (nếu muốn reset)
+    window.addEventListener('resize', ()=>{
+      // optional: adjust to keep smooth loop
+      checkAndResetLoop();
+    });
+  });
+
+});
+
+			</script>
 
 				</body>
 				</html>
