@@ -12,17 +12,16 @@
 
 				<body>
 				<header class="navbar">
-				<div class="logo">
+					<div class="logo">
 					  <img src="icon/logo.jpg" alt="JD Travel Logo">
 					  <h1>JD TRAVEL</h1>
 					</div>
 
 					<nav class="menu">
-					  <a href="#">首頁</a>
-					  <a href="#">旅遊地點</a>
+					  <a href="#gioithieu">關於我們</a>
+					  <a href="#diadiem-section">旅遊地點</a>
 					  <a href="#">旅遊方案</a>
 					  <a href="#">優惠活動</a>
-					  <a href="#">關於我們</a>
 					  <a href="#">聯絡我們</a>
 					</nav>
 
@@ -31,7 +30,7 @@
 					  <img src="icon/icon_facebook.png">
 					  <img src="icon/icon_email.png" >
 					</div>
-			  </header>
+			    </header>
 				  
 
 				<!-- Phần Giới thiệu -->	
@@ -62,11 +61,11 @@
   <h2>旅遊地點</h2>
 
   <div class="category-bar">
-    <button class="active" onclick="showCategory('recommended')">鴻軒首推</button>
-    <button onclick="showCategory('island')">海島渡假</button>
-    <button onclick="showCategory('eastasia')">東北亞</button>
-    <button onclick="showCategory('southeast')">東南亞</button>
-    <button onclick="showCategory('europe')">歐洲</button>
+    <button class="active" onclick="showCategory('recommended')">JD首推</button>
+    <button onclick="showCategory('bacviet')">越南北越</button>
+    <button onclick="showCategory('trungviet')">越南中越</button>
+    <button onclick="showCategory('namviet')">越南南越</button>
+    <button onclick="showCategory('dao')">海島渡假</button>
   </div>
 
   <div id="diadiem" class="diadiem"></div>
@@ -75,31 +74,31 @@
 <script>
 const destinations = {
   recommended: [
-    { name: "日本", img: "diadiem/halong.jpg" },
-    { name: "越南", img: "diadiem/hanoi.jpg" },
-    { name: "不丹", img: "diadiem/sapa.jpg" },
-    { name: "馬爾地夫", img: "diadiem/halong.jpg" },
-    { name: "新加坡", img: "diadiem/hanoi.jpg" },
-    { name: "泰國", img: "diadiem/sapa.jpg" }
+    { name: "峴港", img: "diadiem/danang.jpg" },
+    { name: "會安", img: "diadiem/hoian.jpg" },
+    { name: "下龍灣", img: "diadiem/halong.jpg" },
+    { name: "寧平", img: "diadiem/ninhbinh.jpg" },
+    { name: "新加坡", img: "diadiem/sapa.jpg" },
+    { name: "富國島", img: "diadiem/phuquoc.jpg" }
   ],
-  island: [
+  bacviet: [
     { name: "峇里島", img: "diadiem/halong.jpg" },
     { name: "塞席爾", img: "diadiem/hanoi.jpg" },
     { name: "斐濟", img: "diadiem/sapa.jpg" },
-    { name: "夏威夷", img: "diadiem/halong.jpg" }
+    { name: "夏威夷", img: "diadiem/ninhbinh.jpg" }
   ],
-  eastasia: [
+  trungviet: [
     { name: "日本", img: "diadiem/halong.jpg" },
     { name: "韓國", img: "diadiem/hanoi.jpg" },
     { name: "中國", img: "diadiem/sapa.jpg" }
   ],
-  southeast: [
+  namviet: [
     { name: "越南", img: "diadiem/halong.jpg" },
     { name: "泰國", img: "diadiem/hanoi.jpg" },
     { name: "新加坡", img: "diadiem/sapa.jpg" },
     { name: "馬來西亞", img: "diadiem/halong.jpg" }
   ],
-  europe: [
+  dao: [
     { name: "法國", img: "diadiem/halong.jpg" },
     { name: "義大利", img: "diadiem/hanoi.jpg" },
     { name: "瑞士", img: "diadiem/sapa.jpg" }
@@ -188,7 +187,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
 		
-				 function moLightbox(index) {
+			function moLightbox(index) {
 			  chiSoHienTai = index;
 			  const lightbox = document.getElementById("lightbox");
 			  const lightboxImg = document.getElementById("lightboxImg");
@@ -246,11 +245,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				  <div class="hoptac-item"><img src="hoptac/aman.png" alt=""></div>
 				  <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
 				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
-				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
-				  
-				    <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
-				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
-				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>					
 			  </div>
 			</div>
 		  </div>
@@ -269,10 +264,6 @@ window.addEventListener("DOMContentLoaded", () => {
 				  <div class="hoptac-item"><img src="hoptac/ihg.png" alt=""></div>
 				  <div class="hoptac-item"><img src="hoptac/sheraton.png" alt=""></div>
 				   <div class="hoptac-item"><img src="hoptac/rosewood.png" alt=""></div>
-				   
-				     <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
-				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
-				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>
 			  </div>
 			</div>
 		  </div>
@@ -295,10 +286,12 @@ window.addEventListener("DOMContentLoaded", () => {
 				<h2>聯繫資訊</h2>
 
 				<ul class="contact-list">
+				  <li>接團社：<span>越南金德旅行社 - JD TRAVEL</span></li>
+				  <li>負責人：<span>小幸福小姐 (HELLEN)</span></li>
 				  <li>官方LINE帳號：<span>@jdtravel</span></li>
-				  <li>客服專線：<span>+886 7742-8965</span></li>
+				  <li>客服專線：<span>+084-901957895</span></li>
 				  <li>電子郵件：<span>kimductravel@gmail.com</span></li>
-				  <li>公司地址：<span>105台北市光復南路65號12樓</span></li>
+				  <li>公司地址：<span>峴港市五行山坊鄧太親路12號</span></li>
 				  <li>營業時間：<span>週一至週五 09:30–18:30</span></li>
 				</ul>
 
@@ -406,12 +399,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
       viewport.setPointerCapture(pointerId);
       stopAuto();
     }
+	
     function onPointerMove(e){
       if(!isPointerDown) return;
       const dx = e.clientX - startX;
       viewport.scrollLeft = startScroll - dx;
       // không check loop ở mỗi bước (chậm), sẽ check on scroll end timer
     }
+	
     function onPointerUp(e){
       if(!isPointerDown) return;
       isPointerDown = false;
@@ -457,5 +452,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 			</script>
 
-				</body>
-				</html>
+	</body>
+</html>
