@@ -47,9 +47,12 @@ h2 {
   max-width: 1000px;
   margin: 0 auto 50px;
   padding: 10px;
+  justify-items: center;
 }
 
 .diadiem-item {
+  max-width: 300px;       /* giới hạn chiều rộng mỗi khung hình */
+  width: 100%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
