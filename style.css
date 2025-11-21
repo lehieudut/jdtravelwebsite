@@ -65,34 +65,31 @@ footer {
 
 .icons {
   display: flex;
-  gap: 7px;
+  gap: 20px;
   align-items: center;
 }
 
 
 .icons img {
-  vertical-align:center;
-  transition: transform 0.3s, opacity 0.3s;
+	vertical-align:center;
+	transition: transform 0.3s, opacity 0.3s;
+	width: 32px;     /* đổi tùy ý */
+    height: auto;
+    cursor: pointer;
 }
 
-/* Ảnh đầu tiên (LINE) */
+/* 
 .icons img:nth-child(1) {
   width: 27px;
   height: 27px;
 }
 
-/* Ảnh thứ hai (facebook) */
+/* Ảnh thứ hai (facebook)
 .icons img:nth-child(2) {
   width: 44px;
   height: 44px;
 }
-
-/* Ảnh thứ hai (email) */
-.icons img:nth-child(3) {
-  padding-top: 2px;
-  width: 31px;
-  height: 31px;
-}
+ */
 
 
 .icons img:hover {
