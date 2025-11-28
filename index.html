@@ -8,6 +8,7 @@
 			  <link rel="stylesheet" href="contact.css">
 			  <link rel="stylesheet" href="hoptac.css">
 			  <link rel="stylesheet" href="diadiem.css">
+			  <link rel="stylesheet" href="popup_qr.css">
 			</head>
 
 				<body>
@@ -26,13 +27,14 @@
 					</nav>
 
 					<div class="icons">
-						<a href="#contact">
+						<a id="openQR" class="line-icon">
 							<img src="icon/line_contact.png" alt="LINE">
 						</a>
 						<a href="https://www.facebook.com/li.xin.ying.999" target="_blank" rel="noopener">
 							<img src="icon/icon_facebook.png" alt="Facebook">
 						</a>
 					</div>
+					
 			    </header>
 				  
 
@@ -301,7 +303,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				  <li>公司地址：<span>峴港市五行山坊鄧太親路12號</span></li>
 				</ul>
 
-				<a href="#" class="line-btn">
+				<a id="openQRBottom" class="line-btn">
 				  <img src="icon/line_contact.png" alt="LINE">
 				  <span>加入官方LINE</span>
 				</a>
@@ -313,6 +315,13 @@ window.addEventListener("DOMContentLoaded", () => {
 					<p>© JD Travel All Rights Reserved.</p>
 				  </footer>
 				
+				<!-- POPUP QR CODE -->
+					<div id="qrPopup" class="popup">
+						<div class="popup-content">
+							<img src="icon/line_qr.jpg" alt="LINE QR" class="qr-img">
+							<span class="close-btn">&times;</span>
+						</div>
+					</div>
 				<!-- Scroll phan hoptac -->
 				<script>
 			/*
@@ -455,6 +464,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 
 });
+
+		// popup QR
+		const popup = document.getElementById("qrPopup");
+		const openBtnLine = document.getElementById("openQR");
+		const openBtnLineBottom = document.getElementById("openQRBottom");
+		const closeBtn = document.querySelector(".close-btn");
+
+		openBtnLine.onclick = () => popup.style.display = "flex";
+		openBtnLineBottom.onclick = () => popup.style.display = "flex";
+		closeBtn.onclick = () => popup.style.display = "none";
+
+		// click ra ngoài để tắt popup
+		popup.onclick = (e) => {
+			if (e.target === popup) popup.style.display = "none";
+		};
+
 
 			</script>
 
