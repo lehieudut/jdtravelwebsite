@@ -126,6 +126,34 @@ font-family: sans-serif;
 						.gallery img:hover {
 						  transform: scale(1.05);
 						}
+						
+						.pagination {
+						  margin-bottom: 20px;       /* 👈 khoảng trống với danh sách ảnh */
+						  text-align: center;
+						}
+
+						.pagination button {
+						  margin: 0 6px;
+						  padding: 5px 11px;
+						  border: 1px solid #ccc;
+						  background: #fff;
+						  color: #0B1E34;
+						  cursor: pointer;
+						  font-size: 15px;
+						}
+						
+						/* Hover – đưa chuột vào (chưa click) */
+						.pagination button:hover {
+						  background: #354559;   /* 👈 đổi màu nền */
+						  color: #fff;        /* 👈 đổi màu chữ */
+						  border-color: #354559;
+						}
+
+						.pagination button.active {
+						  background: #0B1E34;
+						  color: #FFE09C;
+						  font-weight: bold;
+						}
 
 						button {
 						  margin-top: 20px;

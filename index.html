@@ -146,9 +146,8 @@ window.addEventListener("DOMContentLoaded", () => {
 					
 
 <!---- Hình ảnh -->
-
+  <div class="pagination" id="pagination"></div>
   <div class="gallery" id="gallery"></div>
-  <button onclick="hienThiAnh()">Hiển thị ảnh khác</button>
 
 	<!-- Lightbox -->
 	  <div class="lightbox" id="lightbox">
@@ -184,60 +183,84 @@ window.addEventListener("DOMContentLoaded", () => {
 		  "IMG_0631.jpg",
 		  "IMG_0685.jpg",
 		  "112925.png"
-		]; // thêm tên file tại đây
+		].sort(() => 0.5 - Math.random()); // thêm tên file tại đây
 		
 		let danhSachDangHien = [];
 		let chiSoHienTai = 0;
 		
-	   function hienThiAnh() {
-      const gallery = document.getElementById("gallery");
-      gallery.innerHTML = "";
-
-      // Chọn 9 ảnh ngẫu nhiên
-      danhSachDangHien = hinhanh
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 12);
-
-      // Hiển thị ảnh
-      danhSachDangHien.forEach((tenFile, index) => {
-        const img = document.createElement("img");
-        img.src = "hinhanh/" + tenFile;
-        img.onclick = () => moLightbox(index);
-        gallery.appendChild(img);
-      });
-    }
+		const soAnhMoiTrang = 12;
+		let trangHienTai = 1;
 		
-			function moLightbox(index) {
-			  chiSoHienTai = index;
-			  const lightbox = document.getElementById("lightbox");
-			  const lightboxImg = document.getElementById("lightboxImg");
-			  lightboxImg.src = "hinhanh/" + danhSachDangHien[index];
-			  lightbox.style.display = "flex";
-			}
+	   function hientrang(trang) {
+		  const gallery = document.getElementById("gallery");
+		  gallery.innerHTML = "";
+		  
+		  const batDau = (trang - 1) * soAnhMoiTrang;
+		  const ketThuc = batDau + soAnhMoiTrang;
+		danhSachDangHien= hinhanh.slice(batDau, ketThuc);
+		  // Hiển thị ảnh
+		 danhSachDangHien.forEach((tenFile, index) => {
+			const img = document.createElement("img");
+			img.src = "hinhanh/" + tenFile;
+			img.onclick = () => moLightbox(index);
+			gallery.appendChild(img);
+		  });
+		}
+		
+		
+		function vePagination() {
+			  const tongTrang = Math.ceil(hinhanh.length / soAnhMoiTrang);
+			  const pagination = document.getElementById("pagination");
+			  pagination.innerHTML = "";
+			  for (let i = 1; i <= tongTrang; i++) {
+				const btn = document.createElement("button");
+				btn.innerText = i;
+				if (i === trangHienTai) {
+					  btn.classList.add("active"); // ⭐ bôi đậm
+					}
+				btn.onclick = () => {
+				  trangHienTai = i;
+				  hientrang(trangHienTai); 
+				  vePagination();
+				};
 
-			function dongLightbox() {
-			  document.getElementById("lightbox").style.display = "none";
-			}
+				pagination.appendChild(btn);
+			  }
+		}
+		
+		function moLightbox(index) {
+			chiSoHienTai = index;
+			const lightbox = document.getElementById("lightbox");
+			const lightboxImg = document.getElementById("lightboxImg");
+			lightboxImg.src = "hinhanh/" + danhSachDangHien[index];
+			lightbox.style.display = "flex";
+		}
 
-			function chuyenAnh(huong) {
-			  chiSoHienTai += huong;
-			  if (chiSoHienTai < 0) chiSoHienTai = danhSachDangHien.length - 1;
-			  if (chiSoHienTai >= danhSachDangHien.length) chiSoHienTai = 0;
-			  document.getElementById("lightboxImg").src = "hinhanh/" + danhSachDangHien[chiSoHienTai];
-			}
+		function dongLightbox() {
+			document.getElementById("lightbox").style.display = "none";
+		}
+
+		function chuyenAnh(huong) {
+			chiSoHienTai += huong;
+			if (chiSoHienTai < 0) chiSoHienTai = danhSachDangHien.length - 1;
+			if (chiSoHienTai >= danhSachDangHien.length) chiSoHienTai = 0;
+			document.getElementById("lightboxImg").src = "hinhanh/" + danhSachDangHien[chiSoHienTai];
+		}
 
 			// Bấm phím ← hoặc → để chuyển ảnh
-			document.addEventListener("keydown", (e) => {
-			  const lightbox = document.getElementById("lightbox");
-			  if (lightbox.style.display === "flex") {
+		document.addEventListener("keydown", (e) => {
+			const lightbox = document.getElementById("lightbox");
+			if (lightbox.style.display === "flex") {
 				if (e.key === "ArrowLeft") chuyenAnh(-1);
 				if (e.key === "ArrowRight") chuyenAnh(1);	
 				if (e.key === "Escape") dongLightbox();
-			  }
-			});
+			}
+		});
 
 		// Tải trang là hiển thị ảnh ngay
-		hienThiAnh();
+			
+		hientrang(1);
+		vePagination();
 </script>
 
 				<section class="hoptac-wrap">
