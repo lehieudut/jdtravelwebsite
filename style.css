@@ -37,6 +37,14 @@ footer {
   height: 55px;
 }
 
+#gioithieu .logo-center {
+    width: 32vw;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto 0 !important;
+}
+
 .logo h1 {
   margin: 0;
   font-size: 20px;
@@ -223,7 +231,7 @@ font-family: sans-serif;
 						  background: rgba(255,255,255,0.6);
 						}
 						
-.tour-list {
+				.tour-list {
 				  display: flex;
 				  flex-direction: column;
 				  gap: 40px;
@@ -288,6 +296,7 @@ font-family: sans-serif;
 				
 				.gioithieu {
 					color:#2C3144; 
+					padding-top: 150px;
 				}
 				
 				.brand-title {
