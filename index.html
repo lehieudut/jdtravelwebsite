@@ -1,76 +1,91 @@
 			<!DOCTYPE html>
-<html lang="vi">
-	<head>
-		<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-92F3YMYS5D"/>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+				<html lang="vi">
+			<head>
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-92F3YMYS5D"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
 
-	  gtag('config', 'G-92F3YMYS5D');
-	</script>
-		<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>JD Travel</title>
-				<link rel="stylesheet" href="style.css">
-					<link rel="stylesheet" href="contact.css">
-						<link rel="stylesheet" href="hoptac.css">
-							<link rel="stylesheet" href="diadiem.css">
-								<link rel="stylesheet" href="popup_qr.css">
+			  gtag('config', 'G-92F3YMYS5D');
+			</script>
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			  <title>JD Travel</title>
+			  <link rel="stylesheet" href="style.css">
+			  <link rel="stylesheet" href="contact.css">
+			  <link rel="stylesheet" href="hoptac.css">
+			  <link rel="stylesheet" href="diadiem.css">
+			  <link rel="stylesheet" href="popup_qr.css">
 			</head>
-								<body>
-									<header class="navbar">
-										<div class="logo">
-											<img src="icon/logo.jpg" alt="JD Travel Logo">
-												<h1>JD TRAVEL</h1>
-											</div>
-											<nav class="menu">
-												<a href="#gioithieu">關於我們</a>
-												<a href="#diadiem-section">旅遊地點</a>
-												<a href="#">旅遊方案</a>
-												<a href="#hinhanh">相簿</a>
-												<a href="#contact">聯絡我們</a>
-											</nav>
-											<div class="icons">
-												<a id="openQR" class="line-icon">
-													<img src="icon/line_contact.png" alt="LINE">
+
+				<body>
+				<header class="navbar">
+					<div class="logo">
+					  <img src="icon/logo.jpg" alt="JD Travel Logo">
+					  <h1>JD TRAVEL</h1>
+					</div>
+
+					<nav class="menu">
+					  <a href="#gioithieu">關於我們</a>
+					  <a href="#diadiem-section">旅遊地點</a>
+					  <a href="#">旅遊方案</a>
+					  <a href="#hinhanh">相簿</a>
+					  <a href="#contact">聯絡我們</a>
+					</nav>
+
+					<div class="icons">
+						<a id="openQR" class="line-icon">
+							<img src="icon/line_contact.png" alt="LINE">
 						</a>
-													<a href="https://www.facebook.com/li.xin.ying.999" target="_blank" rel="noopener">
-														<img src="icon/icon_facebook.png" alt="Facebook">
+						<a href="https://www.facebook.com/li.xin.ying.999" target="_blank" rel="noopener">
+							<img src="icon/icon_facebook.png" alt="Facebook">
 						</a>
-													</div>
-												</header>
-												<!-- Phần Giới thiệu -->
-												<section id="gioithieu">
-													<h2 class="brand-title">品牌理念</h2>
-													<p class="text-sm text-gray-500 mb-8">Brand Philosophy</p>
-													<!-- Content -->
-													<p class="text-lg font-bold leading-relaxed mb-4" style="color: #2C3144;">
+					</div>
+					
+			    </header>
+				  
+
+				<!-- Phần Giới thiệu -->	
+				<section id="gioithieu">
+				
+					<h2 class="brand-title">品牌理念</h2>
+
+					<p class="text-sm text-gray-500 mb-8">Brand Philosophy</p>
+
+					<!-- Content -->
+					<p class="text-lg font-bold leading-relaxed mb-4" style="color: #2C3144;">
 					  「<strong>JD Travel 金德旅游</strong>」——夢想的起點，體驗的巔峰，收藏的永恆
 					</p>
-													<p class="text-gray-700 leading-relaxed mb-3">
+
+					<p class="text-gray-700 leading-relaxed mb-3">
 					  是追求鴻鵠大志的生命旅程，是無與倫比的奢華享受。
 					</p>
-													<p class="text-gray-700 leading-relaxed mb-3">
+					<p class="text-gray-700 leading-relaxed mb-3">
 					  每一趟旅行，都是一場創作，每一份回憶，都是無價的珍藏。
 					</p>
-													<p class="text-gray-700 leading-relaxed">
+					<p class="text-gray-700 leading-relaxed">
 					  我們以創意挑戰極限，以服務精雕細琢，只為將您心中的夢想旅程化為現實。
 					</p>
-												</section>
-												<section id="diadiem-section">
-													<h2>旅遊地點</h2>
-													<div class="category-bar">
-														<button class="active" onclick="showCategory('recommended')">JD首推</button>
-														<button onclick="showCategory('bacviet')">越南北越</button>
-														<button onclick="showCategory('trungviet')">越南中越</button>
-														<button onclick="showCategory('namviet')">越南南越</button>
-														<button onclick="showCategory('dao')">海島渡假</button>
-													</div>
-													<div id="diadiem" class="diadiem"/>
-												</section>
-												<script>
+				  </section>
+				
+
+<section id="diadiem-section">
+  <h2>旅遊地點</h2>
+
+  <div class="category-bar">
+    <button class="active" onclick="showCategory('recommended')">JD首推</button>
+    <button onclick="showCategory('bacviet')">越南北越</button>
+    <button onclick="showCategory('trungviet')">越南中越</button>
+    <button onclick="showCategory('namviet')">越南南越</button>
+    <button onclick="showCategory('dao')">海島渡假</button>
+  </div>
+
+  <div id="diadiem" class="diadiem"></div>
+</section>
+
+<script>
 const destinations = {
   recommended: [
     { name: "峴港", img: "diadiem/danang.jpg" },
@@ -115,9 +130,9 @@ function showCategory(cat) {
   const diadiem = document.getElementById('diadiem');
   diadiem.innerHTML = destinations[cat].map(place => `
     <div class="diadiem-item">
-														<img src="${place.img}" alt="${place.name}">
-															<div class="country-name">${place.name}</div>
-														</div>
+      <img src="${place.img}" alt="${place.name}">
+      <div class="country-name">${place.name}</div>
+    </div>
   `).join('');
 }
 
@@ -127,22 +142,30 @@ window.addEventListener("DOMContentLoaded", () => {
   if (firstBtn) firstBtn.click();
 });
 </script>
-													<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
-													<!-- Phần Slide Ảnh -->
-													<section id="hinhanh">
-														<h2 style="text-align:center; font-size:2em; margin-bottom:10px; color:#333;">相簿</h2>
-													</section>
-													<!---- Hình ảnh -->
-													<div class="pagination" id="pagination"/>
-													<div class="gallery" id="gallery"/>
-													<!-- Lightbox -->
-													<div class="lightbox" id="lightbox">
-														<button class="close" onclick="dongLightbox()">×</button>
-														<button class="prev" onclick="chuyenAnh(-1)">❮</button>
-														<img id="lightboxImg" src="">
-															<button class="next" onclick="chuyenAnh(1)">❯</button>
-														</div>
-														<script>
+
+
+
+			
+			<!-- 🔹 Phần hình ảnh đặt trên Giới thiệu -->
+					<!-- Phần Slide Ảnh -->
+					  <section id="hinhanh">
+					<h2 style="text-align:center; font-size:2em; margin-bottom:10px; color:#333;">相簿</h2>
+				  </section>
+		
+					
+
+<!---- Hình ảnh -->
+  <div class="pagination" id="pagination"></div>
+  <div class="gallery" id="gallery"></div>
+
+	<!-- Lightbox -->
+	  <div class="lightbox" id="lightbox">
+		<button class="close" onclick="dongLightbox()">×</button>
+		<button class="prev" onclick="chuyenAnh(-1)">❮</button>
+		<img id="lightboxImg" src="">
+		<button class="next" onclick="chuyenAnh(1)">❯</button>
+	  </div>
+	<script>
 		const hinhanh = [
 		  "hinh1.jpg",
 		  "hinh2.jpg",
@@ -175,32 +198,32 @@ window.addEventListener("DOMContentLoaded", () => {
 		  "IMG_0685.jpg",
 		  "112925.png",
 		  "08272026.jpg",
-		  "08272026(2).jpg",
-		  "08272026(3).jpg",
-		  "08272026(4).jpg",
-		  "08272026(5).jpg",
-		  "08272026(6).jpg",
-		  "08272026(7).jpg",
-		  "08272026(8).jpg",
-	      "08272026(9).jpg",
-	      "08272026(10).jpg",
-		  "08272026(11).jpg",
-		  "08272026(12).jpg",
-		  "08272026(13).jpg",
-		  "08272026(14).jpg",
-		  "08272026(15).jpg",
-		  "08272026(16).jpg",
-		  "08272026(17).jpg",
-		  "08272026(18).jpg",
-		  "08272026(19).jpg",
-		  "08272026(20).jpg",
-		  "08272026(21).jpg",
-		  "08272026(22).jpg",
-		  "08272026(23).jpg",
-		  "08272026(24).jpg",
-		  "08272026(25).jpg",
-		  "08272026(26).jpg",
-		  "08272026(27).jpg"
+		  "08272026 (2).jpg",
+		  "08272026 (3).jpg",
+		  "08272026 (4).jpg",
+		  "08272026 (5).jpg",
+		  "08272026 (6).jpg",
+		  "08272026 (7).jpg",
+		  "08272026 (8).jpg",
+	      "08272026 (9).jpg",
+	      "08272026 (10).jpg",
+		  "08272026 (11).jpg",
+		  "08272026 (12).jpg",
+		  "08272026 (13).jpg",
+		  "08272026 (14).jpg",
+		  "08272026 (15).jpg",
+		  "08272026 (16).jpg",
+		  "08272026 (17).jpg",
+		  "08272026 (18).jpg",
+		  "08272026 (19).jpg",
+		  "08272026 (20).jpg",
+		  "08272026 (21).jpg",
+		  "08272026 (22).jpg",
+		  "08272026 (23).jpg",
+		  "08272026 (24).jpg",
+		  "08272026 (25).jpg",
+		  "08272026 (26).jpg",
+		  "08272026 (27).jpg"
 		].sort(() => 0.5 - Math.random()); // thêm tên file tại đây
 		
 		let danhSachDangHien = [];
@@ -230,7 +253,13 @@ window.addEventListener("DOMContentLoaded", () => {
 			  const tongTrang = Math.ceil(hinhanh.length / soAnhMoiTrang);
 			  const pagination = document.getElementById("pagination");
 			  pagination.innerHTML = "";
-			  for (let i = 1; i <= tongTrang; i++) { const btn=document.createElement("button" ); btn.innerText=i; if (i===trangHienTai) { btn.classList.add("active"); ⭐ bôi đậm } btn.onclick=()=> {
+			  for (let i = 1; i <= tongTrang; i++) {
+				const btn = document.createElement("button");
+				btn.innerText = i;
+				if (i === trangHienTai) {
+					  btn.classList.add("active"); // ⭐ bôi đậm
+					}
+				btn.onclick = () => {
 				  trangHienTai = i;
 				  hientrang(trangHienTai); 
 				  vePagination();
@@ -254,7 +283,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		function chuyenAnh(huong) {
 			chiSoHienTai += huong;
-			if (chiSoHienTai < 0)chiSoHienTai= danhSachDangHien.length- 1; if (chiSoHienTai>= danhSachDangHien.length) chiSoHienTai = 0;
+			if (chiSoHienTai < 0) chiSoHienTai = danhSachDangHien.length - 1;
+			if (chiSoHienTai >= danhSachDangHien.length) chiSoHienTai = 0;
 			document.getElementById("lightboxImg").src = "hinhanh/" + danhSachDangHien[chiSoHienTai];
 		}
 
@@ -273,111 +303,102 @@ window.addEventListener("DOMContentLoaded", () => {
 		hientrang(1);
 		vePagination();
 </script>
-																<section class="hoptac-wrap">
-																	<div class="hoptac-handshake">
-																		<!-- icon bắt tay (svg) -->
-																		<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<rect width="64" height="64" rx="8" fill="transparent"/>
-																			<path d="M18 38l8-8 6 6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-																			<path d="M46 26l-8 8-6-6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-																			<path d="M20 40c-2 2-1 6 2 8 3 2 7 1 9-1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																			<path d="M44 22c2-2 1-6-2-8-3-2-7-1-9 1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-																		</svg>
-																	</div>
-																	<h2 class="hoptac-title">合作夥伴</h2>
-																	<!-- Carousel 1 -->
-																	<div class="hoptac-carousel" data-carousel-index="0">
-																		<div class="hoptac-viewport">
-																			<div class="hoptac-track">
-																				<div class="hoptac-item">
-																					<img src="hoptac/ThePeninsulaHotelsLogo.png" alt=""/>
-																					<div class="hoptac-item">
-																						<img src="hoptac/FourSeason.png" alt=""/>
-																						<div class="hoptac-item">
-																							<img src="hoptac/SixSenses.png" alt=""/>
-																							<div class="hoptac-item">
-																								<img src="hoptac/intercontinental.png" alt=""/>
-																								<div class="hoptac-item">
-																									<img src="hoptac/aman.png" alt=""/>
-																									<div class="hoptac-item">
-																										<img src="hoptac/melia.png" alt=""/>
-																										<div class="hoptac-item">
-																											<img src="hoptac/marriott.png" alt=""/>
-																											<div class="hoptac-item">
-																												<img src="hoptac/angsana.png" alt=""/>
-																											</div>
-																										</div>
-																									</div>
-																									<div class="hoptac-divider"/>
-																									<!-- Carousel 2 -->
-																									<div class="hoptac-carousel" data-carousel-index="1">
-																										<div class="hoptac-viewport">
-																											<div class="hoptac-track">
-																												<div class="hoptac-item">
-																													<img src="hoptac/wyndham.png" alt=""/>
-																													<div class="hoptac-item">
-																														<img src="hoptac/awaken.png" alt=""/>
-																														<div class="hoptac-item">
-																															<img src="hoptac/hilton.png" alt=""/>
-																															<div class="hoptac-item">
-																																<img src="hoptac/pullman.png" alt=""/>
-																																<div class="hoptac-item">
-																																	<img src="hoptac/radisson.png" alt=""/>
-																																	<div class="hoptac-item">
-																																		<img src="hoptac/ihg.png" alt=""/>
-																																		<div class="hoptac-item">
-																																			<img src="hoptac/sheraton.png" alt=""/>
-																																			<div class="hoptac-item">
-																																				<img src="hoptac/rosewood.png" alt=""/>
-																																			</div>
-																																		</div>
-																																	</div>
-																																</section>
-																																<!-- Lien he -->
-																																<section id="contact">
-																																	<h2>與我們對話</h2>
-																																	<p class="quote">「 每一段旅程的起點，始於一場對話。」</p>
-																																	<p class="desc">
+
+				<section class="hoptac-wrap">
+		  <div class="hoptac-handshake">
+			<!-- icon bắt tay (svg) -->
+			<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+			  <rect width="64" height="64" rx="8" fill="transparent"/>
+			  <path d="M18 38l8-8 6 6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M46 26l-8 8-6-6" stroke="#F2C66A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M20 40c-2 2-1 6 2 8 3 2 7 1 9-1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			  <path d="M44 22c2-2 1-6-2-8-3-2-7-1-9 1" stroke="#F2C66A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		  </div>
+
+		  <h2 class="hoptac-title">合作夥伴</h2>
+
+		  <!-- Carousel 1 -->
+		  <div class="hoptac-carousel" data-carousel-index="0">
+			<div class="hoptac-viewport">
+			  <div class="hoptac-track">
+				  <div class="hoptac-item"><img src="hoptac/ThePeninsulaHotelsLogo.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/FourSeason.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/SixSenses.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/intercontinental.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/aman.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/melia.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/marriott.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/angsana.png" alt=""></div>					
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="hoptac-divider"></div>
+
+		  <!-- Carousel 2 -->
+		  <div class="hoptac-carousel" data-carousel-index="1">
+			<div class="hoptac-viewport">
+			  <div class="hoptac-track">
+				 <div class="hoptac-item"><img src="hoptac/wyndham.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/awaken.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/hilton.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/pullman.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/radisson.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/ihg.png" alt=""></div>
+				  <div class="hoptac-item"><img src="hoptac/sheraton.png" alt=""></div>
+				   <div class="hoptac-item"><img src="hoptac/rosewood.png" alt=""></div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+
+
+<!-- Lien he -->
+			
+			<section id="contact">
+				<h2>與我們對話</h2>
+				<p class="quote">「 每一段旅程的起點，始於一場對話。」</p>
+				<p class="desc">
 				  無論是一趟奢華度假、文化探索，還是獨一無二的冒險挑戰，<br>
-				  我們深信旅行的價值來自於細節的用心。<br>
-																																				<br>
+				  我們深信旅行的價值來自於細節的用心。<br><br>
 				  請告訴我們您的基本需求，讓 JD TRAVEL 的專家團隊為您量身規劃夢幻旅程。<br>
 				  立即聯繫我們，開啟專屬您的旅行故事吧！
 				</p>
-																																					<div class="contact-container">
-																																						<h2>聯繫資訊</h2>
-																																						<ul class="contact-list">
-																																							<li>接團社：<span>越南金德旅行社 - JD TRAVEL</span>
-																																							</li>
-																																							<li>負責人：<span>小幸福小姐 (HELLEN)</span>
-																																							</li>
-																																							<li>官方LINE帳號：<span>@jdtravel</span>
-																																							</li>
-																																							<li>客服專線：<span>+084-901957895</span>
-																																							</li>
-																																							<li>電子郵件：<span>kimductravel@gmail.com</span>
-																																							</li>
-																																							<li>公司地址：<span>峴港市五行山坊鄧太親路12號</span>
-																																							</li>
-																																						</ul>
-																																						<a id="openQRBottom" class="line-btn">
-																																							<img src="icon/line_contact.png" alt="LINE">
-																																								<span>加入官方LINE</span>
-																																							</a>
-																																						</div>
-																																					</section>
-																																					<footer>
-																																						<p>© JD Travel All Rights Reserved.</p>
-																																					</footer>
-																																					<!-- POPUP QR CODE -->
-																																					<div id="qrPopup" class="popup">
-																																						<div class="popup-content">
-																																							<img src="icon/line_qr.jpg" alt="LINE QR" class="qr-img">
-																																								<span class="close-btn">&times;</span>
-																																							</div>
-																																						</div>
-																																						<!-- Scroll phan hoptac -->
-																																						<script>
+
+				 <div class="contact-container">
+				<h2>聯繫資訊</h2>
+
+				<ul class="contact-list">
+				  <li>接團社：<span>越南金德旅行社 - JD TRAVEL</span></li>
+				  <li>負責人：<span>小幸福小姐 (HELLEN)</span></li>
+				  <li>官方LINE帳號：<span>@jdtravel</span></li>
+				  <li>客服專線：<span>+084-901957895</span></li>
+				  <li>電子郵件：<span>kimductravel@gmail.com</span></li>
+				  <li>公司地址：<span>峴港市五行山坊鄧太親路12號</span></li>
+				</ul>
+
+				<a id="openQRBottom" class="line-btn">
+				  <img src="icon/line_contact.png" alt="LINE">
+				  <span>加入官方LINE</span>
+				</a>
+			  </div>
+			  </section>
+
+
+				  <footer>
+					<p>© JD Travel All Rights Reserved.</p>
+				  </footer>
+				
+				<!-- POPUP QR CODE -->
+					<div id="qrPopup" class="popup">
+						<div class="popup-content">
+							<img src="icon/line_qr.jpg" alt="LINE QR" class="qr-img">
+							<span class="close-btn">&times;</span>
+						</div>
+					</div>
+				<!-- Scroll phan hoptac -->
+				<script>
 			/*
   Logic:
   - Nhân đôi nội dung track để tạo hiệu ứng loop mượt (append clone).
@@ -442,7 +463,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
       if(viewport.scrollLeft >= half){
         // copy vị trí - half
         viewport.scrollLeft = viewport.scrollLeft - half;
-      } else if (viewport.scrollLeft <= 0){ edge case (nếu user kéo ngược), nhảy +half viewport.scrollLeft=viewport.scrollLeft + half; } } Thêm listener để sau khi scroll mượt xong thì check loop. Các browsers không cung cấp event'scrollend' chuẩn; dùng timeout nhỏ sau mỗi scroll. let scrollEndTimer=null; viewport.addEventListener('scroll', ()=>{
+      } else if (viewport.scrollLeft <= 0){
+        // edge case (nếu user kéo ngược), nhảy +half
+        viewport.scrollLeft = viewport.scrollLeft + half;
+      }
+    }
+
+    // Thêm listener để sau khi scroll mượt xong thì check loop.
+    // Các browsers không cung cấp event 'scrollend' chuẩn; dùng timeout nhỏ sau mỗi scroll.
+    let scrollEndTimer = null;
+    viewport.addEventListener('scroll', ()=>{
       if(scrollEndTimer) clearTimeout(scrollEndTimer);
       scrollEndTimer = setTimeout(()=> {
         checkAndResetLoop();
@@ -527,5 +557,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 			</script>
-																																						</body>
-																																					</html>
+
+	</body>
+</html>
